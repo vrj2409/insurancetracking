@@ -1,9 +1,8 @@
 {
-  "type": "service_account",
+  "type": "",
   "project_id": "genesis-insurance-487210",
-  "private_key_id": "4e70f5a0ee00da27ff55cde8740bc10be9bbbbb6",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCmTDEQRVS1lPnG\nTmmDwvWnNvg1gLxcvgYye5k97o2omXBPZuApSqUmupDxfb8sajz+Z4sO2T/M5LLF\n05TePHDJAt5iGykOCJXq7uicy+jvZKu1kMHt2T2rs4qOkYDooqXUl4YdXzwgleRm\nOtKYsXRd4yeIXXixg/SRWAN35R6dhqvPQwQt7OlYSJIBJprJ04is3hY7jOkJBgWS\nef5zreM4UEOjNfemPO8J2FXyouZWGPBC6EIlNTXUPJao5Z0/RzxBcbzk/0yr+Usd\nbM2/crAlpWcFtE3ROr9MH7w3HeTOTv65Xl2X2zsk26OTBQyZANq78faj2pWqio9s\n37QoNTqJAgMBAAECggEAA11MKqMa/v7uggHEqUXd2ehM457D9qS+SENd5SRqfurT\nyvSL9nWJVae1itGVpb+TClUmf1mXIPGgptdpds6pU08NGDM2G+E2OXGSq7/50mG2\nNRT/qlVp1EW952+YiflynULsnz71vAE3+RnfYQ7slVLIAMovsY+3ycxEsJq9oKTy\na4K2sWn0lFb1SXvJyPKc86sWE6hv9hx72pKkn2OKVWwiBfU/zOM4pqef28q5Cz4B\n89ghPw9843sXNTNiEhb8Fet4ODz1Wpa8DZAFD/t+D5wh9VzbHNJSTv7crVwrtixb\nLEC0tDcsbvp8gi9rz1tkgeyLha5S+F+RXmpmTkr8XQKBgQDTcb/67Gjq43bbuCzM\nTphxSU9ix4EWXPo1NOEf6Hx8MWQMpr5q3hcZ2MP5Eon9AXTNhjoR3uBG4kd+hEk/\nU5DrbjmY39cZRweTOtPrseoM79I5qgUw9Hff3fD+NHz/36dNtbX8EfpdcYuMGVn6\nXjiuwhoVB2BDPLTgP18k3nlmpwKBgQDJVwbd+4PI3WosSqD1Lra7QVu1SwPXBj/G\nggKMiIdW3ltpApw+6TrKobHHIG/hLPIMOn8vAmK0Rh/k6/71Uru9mPGfsoEKmjvA\ntY/CDf0AMzUUUhnqE17Mtgs1mo4m8z2b3nzlDq/bjBlXAfmr1lx/RUXZEoLv8u9g\nweGXAAurTwKBgQCICQLuuPK3TCjIK7IGr/o7yGKetqRCcwc2/BJqqPSOImiwCwcv\nUjuikWdj8517fVhcciMiJDY+5I4Cw7EsYOM31O6RgFGvHZeuDYcSeKCQOisSlmRI\nnsAQ84V8xuA07vuAb4vp5NcjD04skJLnFX96T77gEKLKH2BvddYMrmWEuQKBgQCP\nEG+ovFdgGzSeVEka7x6Y4FAx+iO4XpBilW8KPNkuOMHrVBeB/GfyJAMW402cSzuS\nxN4qoR9RyaJQIAECgM82Yb8PIt/ekMl0nY6Q7S+hPMGytsQDN9Bc1d4RMMlhk+Vr\nJCTK/iynbF11Hcoy+BaxuJ9xJ14y8gR2VE3f5gBksQKBgErByIXZXrOxAZLQPvSE\nVIsKWUyxjb7ch3WhbiQa9JvWbvYyeC2fwH8qUAY++qsZiaNHMTAR6969Tgb6vdzx\nbtDGvxPm5WxwI7DJcmxakIlHBtRsbMRemTUgUmSPfJJ1NVQWpl/0sz6PAQUDII3c\nwPLjSJwZgiYefBMJz03nJANc\n-----END PRIVATE KEY-----\n",
-  "client_email": "insurance@genesis-insurance-487210.iam.gserviceaccount.com",
+  "private_key_id": "",
+  "private_key": "-----BEGIN PRIVATE KEY-----",
   "client_id": "100161575323478349513",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
   "token_uri": "https://oauth2.googleapis.com/token",
