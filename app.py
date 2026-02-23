@@ -25,9 +25,9 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 :root{
-  --bg:#0a0e1a;--panel:#111827;--card:#1f2937;--border:#374151;
+  --bg:#f8fafc;--panel:#ffffff;--card:#ffffff;--border:#e2e8f0;
   --blue:#3b82f6;--cyan:#06b6d4;--green:#10b981;--red:#ef4444;--amber:#f59e0b;
-  --text:#f9fafb;--muted:#9ca3af;
+  --text:#0f172a;--muted:#64748b;
 }
 html,body,[class*="css"],.stApp{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;}
 #MainMenu,footer,header{visibility:hidden;}
@@ -37,7 +37,7 @@ section[data-testid="stSidebar"] *{color:var(--text)!important;}
 section[data-testid="stSidebar"] label{font-size:.75rem!important;font-weight:500;
   text-transform:uppercase;color:var(--muted)!important;letter-spacing:.05em;}
 .kpi{background:var(--card);border:1px solid var(--border);border-radius:12px;
-  padding:1.5rem;position:relative;overflow:hidden;transition:all .3s ease;box-shadow:0 1px 3px rgba(0,0,0,.2);}
+  padding:1.5rem;position:relative;overflow:hidden;transition:all .3s ease;box-shadow:0 1px 3px rgba(0,0,0,.05);}
 .kpi:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(59,130,246,.15);}
 .kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
 .kpi-total::before{background:linear-gradient(90deg,var(--blue),var(--cyan));}
@@ -282,10 +282,10 @@ with cc1:
             hovertemplate="<b>%{x}</b><br>Policy: %{customdata[0]}<br>Cause: %{customdata[2]}<br>₹%{y:,.0f} · %{customdata[1]}<extra></extra>",
         ))
         fig.update_layout(paper_bgcolor="rgba(0,0,0,0)",plot_bgcolor="rgba(0,0,0,0)",
-            font=dict(family="Inter",color="#9ca3af",size=11),
+            font=dict(family="Inter",color="#64748b",size=11),
             margin=dict(l=0,r=0,t=10,b=0),height=260,bargap=0.3,
             xaxis=dict(showgrid=False,tickfont=dict(size=10)),
-            yaxis=dict(showgrid=True,gridcolor="#374151",tickformat=",.0f",tickfont=dict(size=10)))
+            yaxis=dict(showgrid=True,gridcolor="#e2e8f0",tickformat=",.0f",tickfont=dict(size=10)))
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar":False})
 
 with cc2:
@@ -296,16 +296,16 @@ with cc2:
         fig2  = go.Figure(go.Pie(
             labels=counts.index, values=counts.values, hole=0.58,
             marker=dict(colors=[cmap2.get(s,"#3b82f6") for s in counts.index],
-                        line=dict(color="#0a0e1a",width=3)),
+                        line=dict(color="#ffffff",width=3)),
             textfont=dict(family="Inter",size=11),
             hovertemplate="<b>%{label}</b><br>%{value} · %{percent}<extra></extra>",
         ))
         fig2.update_layout(paper_bgcolor="rgba(0,0,0,0)",
-            font=dict(family="Inter",color="#9ca3af"),
+            font=dict(family="Inter",color="#64748b"),
             margin=dict(l=0,r=0,t=10,b=0),height=260,
-            legend=dict(font=dict(color="#9ca3af",size=10),bgcolor="rgba(0,0,0,0)",x=1.02,y=0.5),
+            legend=dict(font=dict(color="#64748b",size=10),bgcolor="rgba(0,0,0,0)",x=1.02,y=0.5),
             annotations=[dict(text=f"<b>{total}</b>",x=0.5,y=0.5,
-                font=dict(size=20,color="#f9fafb",family="Inter"),showarrow=False)])
+                font=dict(size=20,color="#0f172a",family="Inter"),showarrow=False)])
         st.plotly_chart(fig2, use_container_width=True, config={"displayModeBar":False})
 
 # Coverage bar
@@ -316,13 +316,13 @@ if "coverage_type" in df.columns and df["coverage_type"].nunique() > 1:
         y=cov["coverage_type"], x=cov["exposure"], orientation="h",
         marker=dict(color=cov["exposure"],colorscale=[[0,"#1e3a8a"],[0.5,"#3b82f6"],[1,"#06b6d4"]],line_width=0),
         text=cov.apply(lambda r: f"₹{r['exposure']:,.0f}  ({r['claims']} claims)",axis=1),
-        textposition="outside",textfont=dict(color="#9ca3af",size=10,family="Inter"),
+        textposition="outside",textfont=dict(color="#64748b",size=10,family="Inter"),
         hovertemplate="<b>%{y}</b><br>₹%{x:,.0f}<extra></extra>",
     ))
     fig3.update_layout(paper_bgcolor="rgba(0,0,0,0)",plot_bgcolor="rgba(0,0,0,0)",
-        font=dict(family="Inter",color="#9ca3af",size=11),
+        font=dict(family="Inter",color="#64748b",size=11),
         margin=dict(l=0,r=200,t=10,b=0),height=max(200,len(cov)*45),
-        xaxis=dict(showgrid=True,gridcolor="#374151",tickformat=",.0f"),
+        xaxis=dict(showgrid=True,gridcolor="#e2e8f0",tickformat=",.0f"),
         yaxis=dict(showgrid=False))
     st.plotly_chart(fig3, use_container_width=True, config={"displayModeBar":False})
 
@@ -343,11 +343,11 @@ def hl(val):
 
 styled = (df_tbl.style
     .applymap(hl, subset=["validation_status"] if "validation_status" in df_tbl.columns else [])
-    .set_properties(**{"background-color":"#1f2937","color":"#f9fafb","border-color":"#374151",
+    .set_properties(**{"background-color":"#ffffff","color":"#0f172a","border-color":"#e2e8f0",
                        "font-family":"Inter, sans-serif","font-size":"0.8rem"})
-    .set_table_styles([{"selector":"th","props":[("background-color","#111827"),("color","#9ca3af"),
+    .set_table_styles([{"selector":"th","props":[("background-color","#f8fafc"),("color","#64748b"),
         ("font-family","Inter, sans-serif"),("font-size","0.7rem"),("letter-spacing","0.05em"),
-        ("text-transform","uppercase"),("font-weight","600"),("border-bottom","1px solid #374151")]}]))
+        ("text-transform","uppercase"),("font-weight","600"),("border-bottom","1px solid #e2e8f0")]}]))
 st.dataframe(styled, use_container_width=True, height=min(420,(len(df_tbl)+1)*38+6), hide_index=True)
 
 
